@@ -1,0 +1,60 @@
+.login_reg{
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+}
+.login_reg input{
+    margin-bottom: 5px;
+}
+.red{
+    color: red;
+}
+.header{
+    font-size: 16pt;
+    display: inline-block;
+}
+.right{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 15px;
+    padding-left: 40px;
+}
+h2, h3, h4{
+    margin-bottom: 5px;
+}
+
+table{
+    border: 2px solid black;
+    width: 65%;
+}
+th{
+    background-color: gray;
+    color: white;
+    margin: 0;
+    padding: 5px;
+}
+tr{
+    margin: 0;
+}
+a{
+    margin-right: 10px;
+    margin-left: 20px;
+}
+.gray{
+    background-color: gainsboro;
+}
+button{
+    margin-right: 20px;
+    margin-left: 15px;
+}
+button a{
+    text-decoration: none;
+}
+.border{
+    width: 35%;
+    border: 2px solid black;
+    padding: 20px;
+}

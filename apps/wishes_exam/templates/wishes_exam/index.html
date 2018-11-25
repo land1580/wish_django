@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/wishes_exam/css/styles.css' %}"/>
+    <title>The Wishing App</title>
+</head>
+<body>
+    <h1>Welcome! Sign in to make a wish!</h1>
+    <form class="login_reg" action="/process" method="POST">
+        <center><h2>Register</h2></center>
+        {% csrf_token %}
+        <label for="first_name">First name </label>
+        <input type="text" name="first_name" placeholder=" Ex. John"><br>
+        <label for="last_name">Last name </label>
+        <input type="text" name="last_name" placeholder=" Ex. Doe"><br>
+        <label for="email">Email </label>
+        <input type="text" name="email" placeholder=" Ex. email@gmail.com"><br>
+        <label for="password">Password </label>
+        <input type="password" name="password" placeholder=" Ex. *******"><br>
+        <label for="pw_confirm">Confirm Password </label>
+        <input type="password" name="pw_confirm" placeholder=" Ex. *******"><br>
+        <input type="submit" value="Register">
+    </form>
+    <form class="login_reg" action="/login" method="POST">
+        <center><h2>Login</h2></center>
+        {% csrf_token %}
+        <label for="email">Email </label>
+        <input type="text" name="email" placeholder=" Ex. email@gmail.com"><br>
+        <label for="password">Password </label>
+        <input type="password" name="password" placeholder=" Ex. *******"><br>
+        <input type="submit" value="Login">
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <p class="red">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
